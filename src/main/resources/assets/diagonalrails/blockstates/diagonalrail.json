@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "shape=north_south": {
+      "model": "diagonalrails:diagonalrail"
+    },
+     "shape=east_west": {
+      "model": "diagonalrails:diagonalrail"
+    },
+    "shape=north_west": {
+      "model": "diagonalrails:diagonalrail_north_west"
+    },
+    "shape=north_east": {
+      "model": "diagonalrails:diagonalrail_north_east"
+    },
+    "shape=south_west": {
+      "model": "diagonalrails:diagonalrail_south_west"
+    },
+    "shape=south_east": {
+      "model": "diagonalrails:diagonalrail_south_east"
+    }
+    // Add more variants if your rail has more shapes like curves or intersections
+  }
+}

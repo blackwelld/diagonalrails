@@ -1,0 +1,93 @@
+{
+    "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
+"ambientocclusion": false,
+    "textures": {
+        "particle": "minecraft:blocks/rail_normal",
+        "rail_normal": "minecraft:blocks/rail_normal"
+    },
+    "display": {
+        "gui": {
+            "rotation": [ 86, 0, 0 ],
+            "translation": [ -2, 3, 0 ],
+            "scale": [ 0.825, 0.825, 0.825 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 268, 0, 0 ],
+            "translation": [ -2, -2, -8 ],
+            "scale": [ 0.8, 0.8, 0.8 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 45, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.4, 0.4, 0.4 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 75, 45, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.375, 0.375, 0.375 ]
+        }
+    },
+    "elements": [
+        {
+            "name": "Plank1",
+            "from": [ 10, 0.5, 8 ], 
+            "to": [ 12, 0.5, 19.3 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -45.0 },
+            "faces": {
+                "north": { "texture": "#rail_normal", "uv": [ 2, 1, 1, 3 ], "rotation": 270 },
+                "east": { "texture": "#rail_normal", "uv": [ 4, 5, 12, 6 ], "rotation": 180 },
+                "south": { "texture": "#rail_normal", "uv": [ 2, 1, 1, 3 ], "rotation": 270 },
+                "west": { "texture": "#rail_normal", "uv": [ 4, 6, 12, 7 ] },
+                "up": { "texture": "#rail_normal", "uv": [ 4, 5, 12, 7 ], "rotation": 90 },
+                "down": { "texture": "#rail_normal", "uv": [ 12, 5, 4, 7 ], "rotation": 270, "cullface": "down" }
+            }
+        },
+        {
+            "name": "Plank2",
+            "from": [ 4, 0.5, 8 ], 
+            "to": [ 6, 0.5, 19.3 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -45.0 },
+            "faces": {
+                "north": { "texture": "#rail_normal", "uv": [ 2, 1, 1, 3 ], "rotation": 270 },
+                "east": { "texture": "#rail_normal", "uv": [ 4, 9, 12, 10 ], "rotation": 180 },
+                "south": { "texture": "#rail_normal", "uv": [ 2, 1, 1, 3 ], "rotation": 270 },
+                "west": { "texture": "#rail_normal", "uv": [ 4, 10, 12, 11 ] },
+                "up": { "texture": "#rail_normal", "uv": [ 4, 9, 12, 11 ], "rotation": 90 },
+                "down": { "texture": "#rail_normal", "uv": [ 12, 9, 4, 11 ], "rotation": 270, "cullface": "down" }
+            }
+        },
+        {
+            "name": "RailOuter",
+            "from": [ -2.3, 0.7, 9 ], 
+            "to": [ 18.3, 0.7, 11 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -45.0 },
+            "faces": {
+                "north": { "texture": "#rail_normal", "uv": [ 2, 16, 3, 0 ], "rotation": 90 },
+                "east": { "texture": "#rail_normal", "uv": [ 4, 0, 2, 2 ], "cullface": "east" },
+                "south": { "texture": "#rail_normal", "uv": [ 4, 0, 3, 16 ], "rotation": 90 },
+                "west": { "texture": "#rail_normal", "uv": [ 2, 15, 4, 15 ], "cullface": "west" },
+                "up": { "texture": "#rail_normal", "uv": [ 2, 0, 4, 16 ], "rotation": 90 },
+                "down": { "texture": "#rail_normal", "uv": [ 2, 0, 4, 16 ], "rotation": 90 }
+            }
+        },
+        {
+            "name": "RailInner",
+            "from": [ 5, 0.7, 16.3 ], 
+            "to": [ 11, 0.7, 18.3 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": -45.0 },
+            "faces": {
+                "north": { "texture": "#rail_normal", "uv": [ 3, 0, 4, 4 ], "rotation": 90 },
+                "east": { "texture": "#rail_normal", "uv": [ 14, 2, 12, 1 ], "cullface": "east" },
+                "south": { "texture": "#rail_normal", "uv": [ 13.5, 1, 13.6, 3 ] },
+                "west": { "texture": "#rail_normal", "uv": [ 12, 14, 14, 16 ], "cullface": "west" },
+                "up": { "texture": "#rail_normal", "uv": [ 12, 10, 14, 16 ], "rotation": 90 },
+                "down": { "texture": "#rail_normal", "uv": [ 12, 10, 14, 16 ], "rotation": 90 }
+            }
+        }
+    ]
+}

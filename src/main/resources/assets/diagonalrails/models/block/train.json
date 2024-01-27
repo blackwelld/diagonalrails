@@ -1,0 +1,12 @@
+{
+  "parent": "diagonalrails:custom/train",
+  "textures": {
+    "all": "diagonalrails:blocks/glass_white",
+    "particle": "diagonalrails:blocks/glass_white",
+    "10": "diagonalrails:blocks/wool_colored_gray",
+    "9": "diagonalrails:blocks/wool_colored_black",
+    "5": "diagonalrails:blocks/glass_white",
+    "11": "diagonalrails:blocks/wool_colored_red",
+    "7": "diagonalrails:blocks/planks_birch"
+  }
+}

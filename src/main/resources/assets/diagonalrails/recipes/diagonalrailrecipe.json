@@ -1,0 +1,30 @@
+{
+  "group": "diagonalrails",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 45",
+    "67 "
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:rail"
+    },
+    "4": {
+      "item": "minecraft:rail"
+    },
+    "5": {
+      "item": "minecraft:rail"
+    },
+    "6": {
+      "item": "minecraft:rail"
+    },
+    "7": {
+      "item": "minecraft:rail"
+    }
+  },
+  "result": {
+    "item": "diagonalrails:diagonalrail",
+    "count": 5
+  }
+}

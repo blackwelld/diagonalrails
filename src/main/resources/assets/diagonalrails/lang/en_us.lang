@@ -1,0 +1,4 @@
+tile.diagonalrail.name=Diagonal Rail
+tile.train.name=Train
+itemGroup.tabdiagonalrails=Diagonal Rails
+item.trainspawner.name=Train
