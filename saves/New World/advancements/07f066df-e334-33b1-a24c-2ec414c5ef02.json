@@ -1,0 +1,30 @@
+{
+  "minecraft:recipes/transportation/activator_rail": {
+    "criteria": {
+      "has_rail": "2024-01-27 20:33:49 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/detector_rail": {
+    "criteria": {
+      "has_rail": "2024-01-27 20:33:49 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/golden_rail": {
+    "criteria": {
+      "has_rail": "2024-01-27 20:33:49 -0600"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "beaches": "2024-01-27 20:33:49 -0600",
+      "plains": "2024-01-27 20:38:39 -0600",
+      "jungle_hills": "2024-01-27 20:37:45 -0600",
+      "ocean": "2024-01-27 20:36:39 -0600",
+      "jungle": "2024-01-27 20:36:52 -0600"
+    },
+    "done": false
+  }
+}

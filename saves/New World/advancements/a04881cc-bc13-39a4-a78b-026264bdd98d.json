@@ -1,0 +1,11 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "beaches": "2024-01-27 18:36:30 -0600",
+      "jungle_hills": "2024-01-27 18:35:48 -0600",
+      "river": "2024-01-27 18:35:45 -0600",
+      "jungle": "2024-01-27 18:35:33 -0600"
+    },
+    "done": false
+  }
+}

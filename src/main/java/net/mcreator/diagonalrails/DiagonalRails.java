@@ -18,10 +18,11 @@
 package net.mcreator.diagonalrails;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
-
+import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.registry.EntityEntry;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -39,14 +40,20 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 
 import net.minecraft.world.biome.Biome;
 import net.minecraft.potion.Potion;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.item.Item;
-
+import net.mcreator.diagonalrails.Client.Renderer.Entity.TrainRenderer;
+import net.mcreator.diagonalrails.entity.TrainEntity;
+import net.mcreator.diagonalrails.item.TrainSpawnItem;
 import net.minecraft.block.Block;
 
 import java.util.function.Supplier;
 
+import org.apache.logging.log4j.Logger;
+
 @Mod(modid = DiagonalRails.MODID, version = DiagonalRails.VERSION)
 public class DiagonalRails {
+	public static Logger LOGGER;
 	public static final String MODID = "diagonalrails";
 	public static final String VERSION = "1.0.0";
 	public static final SimpleNetworkWrapper PACKET_HANDLER = NetworkRegistry.INSTANCE.newSimpleChannel("diagonalrails:a");
@@ -57,6 +64,7 @@ public class DiagonalRails {
 	public ElementsDiagonalRails elements = new ElementsDiagonalRails();
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		LOGGER = event.getModLog();
 		MinecraftForge.EVENT_BUS.register(this);
 		GameRegistry.registerWorldGenerator(elements, 5);
 		GameRegistry.registerFuelHandler(elements);
@@ -66,8 +74,32 @@ public class DiagonalRails {
 		elements.getElements().forEach(element -> element.preInit(event));
 		proxy.preInit(event);
 		
-}
-	
+		// Register the TrainEntity
+	    EntityRegistry.registerModEntity(new ResourceLocation("diagonalrails:trainentity"),
+	            TrainEntity.class, "TrainEntity", /* entityID */ 501, this, 64, 3, true, /* eggPrimary */ 0xFFFFFF, /* eggSecondary */ 0x000000);
+
+	    // Client-side rendering setup
+	    if(event.getSide() == Side.CLIENT) {
+	        RenderingRegistry.registerEntityRenderingHandler(TrainEntity.class, new TrainRenderer.Factory());
+	    }
+	    
+	    MinecraftForge.EVENT_BUS.register(new RegistrationHandler());
+
+	}
+		
+
+	@Mod.EventBusSubscriber
+	public static class RegistrationHandler {
+	    @SubscribeEvent
+	    public static void registerItems(RegistryEvent.Register<Item> event) {
+	        final IForgeRegistry<Item> registry = event.getRegistry();
+	        final Item[] items = {
+	            new TrainSpawnItem()
+	            // Add other items here if you have more
+	        };
+	        registry.registerAll(items);
+	    }
+	}
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
